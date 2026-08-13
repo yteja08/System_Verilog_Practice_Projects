@@ -1,10 +1,9 @@
-interface full_adder_itf;
-
-    logic a;
-    logic b;
-    logic cin;
-
-    logic sum;
-    logic cout;
-
+interface itf();
+  logic a;
+  logic b;
+  logic c;
+  
+  logic sum;
+  logic carry;
+  
 endinterface
