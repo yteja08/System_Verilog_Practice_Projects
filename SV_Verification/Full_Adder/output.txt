@@ -1,5 +1,5 @@
-[200~[2026-08-10 10:24:44 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-access' '+rw' design.sv testbench.sv  
-TOOL:	xrun	25.03-s001: Started on Aug 10, 2026 at 06:24:45 EDT
+[2026-08-13 04:29:56 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-access' '+rw' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 13, 2026 at 00:29:56 EDT
 xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
 	Top level design units:
 		$unit_0x67f934e9
@@ -8,247 +8,82 @@ Loading snapshot worklib.testbench:sv .................... Done
 SVSEED default: 1
 xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
 xcelium> run
-Generator: a=0 b=0 cin=0
-Generator: a=0 b=0 cin=0
-Generator: a=0 b=0 cin=0
-Generator: a=0 b=0 cin=1
-Generator: a=0 b=1 cin=1
-Generator: a=1 b=1 cin=0
-Generator: a=0 b=0 cin=1
-Generator: a=1 b=0 cin=1
-Generator: a=1 b=1 cin=1
-Generator: a=1 b=1 cin=0
-Generator: a=1 b=1 cin=0
-Generator: a=0 b=1 cin=1
-Generator: a=0 b=0 cin=1
-Generator: a=0 b=1 cin=0
-Generator: a=1 b=0 cin=1
-Generator: a=0 b=1 cin=0
-Generator: a=0 b=0 cin=1
-Generator: a=0 b=1 cin=0
-Generator: a=0 b=0 cin=0
-Generator: a=0 b=0 cin=0
-Generator: a=0 b=1 cin=1
-Generator: a=0 b=0 cin=0
-Generator: a=0 b=0 cin=1
-Generator: a=0 b=0 cin=0
-Generator: a=1 b=1 cin=0
-Generator: a=1 b=0 cin=1
-Generator: a=0 b=0 cin=0
-Generator: a=0 b=1 cin=1
-Generator: a=1 b=0 cin=0
-Generator: a=1 b=0 cin=1
-Generator: a=0 b=1 cin=0
-Generator: a=1 b=0 cin=1
-Generator: a=1 b=1 cin=0
-Generator: a=0 b=0 cin=0
-Generator: a=1 b=0 cin=0
-Generator: a=1 b=0 cin=1
-Generator: a=1 b=1 cin=0
-Generator: a=1 b=1 cin=0
-Generator: a=0 b=1 cin=0
-Generator: a=1 b=1 cin=1
-Driver: a=0 b=0 cin=0
-Monitor: a=0 b=0 cin=0 sum=0 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=0 b=0 cin=0
-Monitor: a=0 b=0 cin=0 sum=0 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=0 b=0 cin=0
-Monitor: a=0 b=0 cin=0 sum=0 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=0 b=0 cin=1
-Monitor: a=0 b=0 cin=1 sum=1 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=0 b=1 cin=1
-Monitor: a=0 b=1 cin=1 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=1 b=1 cin=0
-Monitor: a=1 b=1 cin=0 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=0 b=0 cin=1
-Monitor: a=0 b=0 cin=1 sum=1 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=1 b=0 cin=1
-Monitor: a=1 b=0 cin=1 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=1 b=1 cin=1
-Monitor: a=1 b=1 cin=1 sum=1 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=1 b=1 cin=0
-Monitor: a=1 b=1 cin=0 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=1 b=1 cin=0
-Monitor: a=1 b=1 cin=0 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=0 b=1 cin=1
-Monitor: a=0 b=1 cin=1 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=0 b=0 cin=1
-Monitor: a=0 b=0 cin=1 sum=1 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=0 b=1 cin=0
-Monitor: a=0 b=1 cin=0 sum=1 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=1 b=0 cin=1
-Monitor: a=1 b=0 cin=1 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=0 b=1 cin=0
-Monitor: a=0 b=1 cin=0 sum=1 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=0 b=0 cin=1
-Monitor: a=0 b=0 cin=1 sum=1 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=0 b=1 cin=0
-Monitor: a=0 b=1 cin=0 sum=1 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=0 b=0 cin=0
-Monitor: a=0 b=0 cin=0 sum=0 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=0 b=0 cin=0
-Monitor: a=0 b=0 cin=0 sum=0 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=0 b=1 cin=1
-Monitor: a=0 b=1 cin=1 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=0 b=0 cin=0
-Monitor: a=0 b=0 cin=0 sum=0 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=0 b=0 cin=1
-Monitor: a=0 b=0 cin=1 sum=1 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=0 b=0 cin=0
-Monitor: a=0 b=0 cin=0 sum=0 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=1 b=1 cin=0
-Monitor: a=1 b=1 cin=0 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=1 b=0 cin=1
-Monitor: a=1 b=0 cin=1 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=0 b=0 cin=0
-Monitor: a=0 b=0 cin=0 sum=0 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=0 b=1 cin=1
-Monitor: a=0 b=1 cin=1 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=1 b=0 cin=0
-Monitor: a=1 b=0 cin=0 sum=1 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=1 b=0 cin=1
-Monitor: a=1 b=0 cin=1 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=0 b=1 cin=0
-Monitor: a=0 b=1 cin=0 sum=1 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=1 b=0 cin=1
-Monitor: a=1 b=0 cin=1 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=1 b=1 cin=0
-Monitor: a=1 b=1 cin=0 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=0 b=0 cin=0
-Monitor: a=0 b=0 cin=0 sum=0 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=1 b=0 cin=0
-Monitor: a=1 b=0 cin=0 sum=1 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=1 b=0 cin=1
-Monitor: a=1 b=0 cin=1 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=1 b=1 cin=0
-Monitor: a=1 b=1 cin=0 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=1 b=1 cin=0
-Monitor: a=1 b=1 cin=0 sum=0 cout=1
-+----+
-|PASS|
-+----+
-Driver: a=0 b=1 cin=0
-Monitor: a=0 b=1 cin=0 sum=1 cout=0
-+----+
-|PASS|
-+----+
-Driver: a=1 b=1 cin=1
-Monitor: a=1 b=1 cin=1 sum=1 cout=1
-+----+
-|PASS|
-+----+
+Generator:, a=0 ,b=0, c=0
+Generator:, a=0 ,b=0, c=0
+Generator:, a=0 ,b=0, c=0
+Generator:, a=0 ,b=0, c=1
+Generator:, a=0 ,b=1, c=1
+Generator:, a=1 ,b=1, c=0
+Generator:, a=0 ,b=0, c=1
+Generator:, a=1 ,b=0, c=1
+Generator:, a=1 ,b=1, c=1
+Generator:, a=1 ,b=1, c=0
+Generator:, a=1 ,b=1, c=0
+Generator:, a=0 ,b=1, c=1
+Generator:, a=0 ,b=0, c=1
+Generator:, a=0 ,b=1, c=0
+Generator:, a=1 ,b=0, c=1
+DRIVER:, a=0 ,b=0, c=0
+MONITOR:, a=0 ,b=0, c=0, sum=0, carry=0
+SCOREBOARD:, a=0 ,b=0, c=0, sum=0, carry=0
+PASS
+DRIVER:, a=0 ,b=0, c=0
+MONITOR:, a=0 ,b=0, c=0, sum=0, carry=0
+SCOREBOARD:, a=0 ,b=0, c=0, sum=0, carry=0
+PASS
+DRIVER:, a=0 ,b=0, c=0
+MONITOR:, a=0 ,b=0, c=0, sum=0, carry=0
+SCOREBOARD:, a=0 ,b=0, c=0, sum=0, carry=0
+PASS
+DRIVER:, a=0 ,b=0, c=1
+MONITOR:, a=0 ,b=0, c=1, sum=1, carry=0
+SCOREBOARD:, a=0 ,b=0, c=1, sum=1, carry=0
+PASS
+DRIVER:, a=0 ,b=1, c=1
+MONITOR:, a=0 ,b=1, c=1, sum=0, carry=1
+SCOREBOARD:, a=0 ,b=1, c=1, sum=0, carry=1
+PASS
+DRIVER:, a=1 ,b=1, c=0
+MONITOR:, a=1 ,b=1, c=0, sum=0, carry=1
+SCOREBOARD:, a=1 ,b=1, c=0, sum=0, carry=1
+PASS
+DRIVER:, a=0 ,b=0, c=1
+MONITOR:, a=0 ,b=0, c=1, sum=1, carry=0
+SCOREBOARD:, a=0 ,b=0, c=1, sum=1, carry=0
+PASS
+DRIVER:, a=1 ,b=0, c=1
+MONITOR:, a=1 ,b=0, c=1, sum=0, carry=1
+SCOREBOARD:, a=1 ,b=0, c=1, sum=0, carry=1
+PASS
+DRIVER:, a=1 ,b=1, c=1
+MONITOR:, a=1 ,b=1, c=1, sum=1, carry=1
+SCOREBOARD:, a=1 ,b=1, c=1, sum=1, carry=1
+PASS
+DRIVER:, a=1 ,b=1, c=0
+MONITOR:, a=1 ,b=1, c=0, sum=0, carry=1
+SCOREBOARD:, a=1 ,b=1, c=0, sum=0, carry=1
+PASS
+DRIVER:, a=1 ,b=1, c=0
+MONITOR:, a=1 ,b=1, c=0, sum=0, carry=1
+SCOREBOARD:, a=1 ,b=1, c=0, sum=0, carry=1
+PASS
+DRIVER:, a=0 ,b=1, c=1
+MONITOR:, a=0 ,b=1, c=1, sum=0, carry=1
+SCOREBOARD:, a=0 ,b=1, c=1, sum=0, carry=1
+PASS
+DRIVER:, a=0 ,b=0, c=1
+MONITOR:, a=0 ,b=0, c=1, sum=1, carry=0
+SCOREBOARD:, a=0 ,b=0, c=1, sum=1, carry=0
+PASS
+DRIVER:, a=0 ,b=1, c=0
+MONITOR:, a=0 ,b=1, c=0, sum=1, carry=0
+SCOREBOARD:, a=0 ,b=1, c=0, sum=1, carry=0
+PASS
+DRIVER:, a=1 ,b=0, c=1
+MONITOR:, a=1 ,b=0, c=1, sum=0, carry=1
+SCOREBOARD:, a=1 ,b=0, c=1, sum=0, carry=1
+PASS
 xmsim: *W,RNQUIE: Simulation is complete.
 xcelium> exit
-TOOL:	xrun	25.03-s001: Exiting on Aug 10, 2026 at 06:24:46 EDT  (total: 00:00:01)
+TOOL:	xrun	25.03-s001: Exiting on Aug 13, 2026 at 00:29:58 EDT  (total: 00:00:02)
 Done
