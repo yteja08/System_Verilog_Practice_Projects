@@ -1,55 +1,41 @@
+
+`include "transaction.sv"
+`include "generator.sv"
+`include "driver.sv"
+`include "monitor.sv"
+`include "scoreboard.sv"
+
 class environment;
-
-    generator  gen;
-    driver     drv;
-    monitor    mon;
-    scoreboard scb;
-
-    mailbox #(transaction) gen2drv;
-    mailbox #(transaction) drv2mon;
-    mailbox #(transaction) mon2scb;
-
-    mailbox #(bit) mon2drv_ack;
-
-    virtual full_adder_itf vitf;
-
-
-  function new(virtual full_adder_itf vitf);
-
-        this.vitf = vitf;
-
-        gen2drv = new();
-        drv2mon = new();
-        mon2scb = new();
-
-        mon2drv_ack = new();
-
-        gen = new(gen2drv);
-
-        drv = new(gen2drv,
-                   drv2mon,
-                   mon2drv_ack,
-                   vitf);
-
-        mon = new(drv2mon,
-                  mon2scb,
-                  mon2drv_ack,
-                  vitf);
-
-        scb = new(mon2scb);
-
-    endfunction
-
-
-    task run();
-
-        fork
-            gen.run();
-            drv.run();
-            mon.run();
-            scb.run();
-        join
-
+  generator gen;
+  driver drv;
+  monitor mon;
+  scoreboard scb;
+  
+  mailbox gen2drv;
+  mailbox mon2scb;
+  
+  virtual itf vitf;
+  
+  event drive_done;
+  
+  function new(virtual itf vitf);
+    this.vitf=vitf;
+    
+    gen2drv=new();
+    mon2scb=new();
+    gen=new(gen2drv);
+    drv=new(vitf,gen2drv,drive_done);
+    mon=new(vitf,mon2scb,drive_done);
+    scb=new(mon2scb);
+    
+  endfunction
+    
+    task run_test();
+      fork
+        gen.main();
+        drv.main();
+        mon.main();
+        scb.main();
+      join
     endtask
-
 endclass
