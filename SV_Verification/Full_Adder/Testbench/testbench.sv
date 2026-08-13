@@ -1,29 +1,21 @@
-`include "transaction.sv"
-`include "generator.sv"
 `include "interface.sv"
-`include "driver.sv"
-`include "monitor.sv"
-`include "scoreboard.sv"
 `include "environment.sv"
 
-module testbench;
+module testbench();
+  itf ditf();
+  environment env;  
+
+full_adder dut(
+  .a(ditf.a),
+  .b(ditf.b),
+  .c(ditf.c),
+  .sum(ditf.sum),
+  .carry(ditf.carry));
   
-    environment env;
-
-    full_adder_itf vitf();
-
-    full_adder dut (
-      .a    (vitf.a),
-      .b    (vitf.b),
-      .cin  (vitf.cin),
-      .sum  (vitf.sum),
-      .cout (vitf.cout)
-    );
-
-    initial begin
-      env = new(vitf);
-      env.run();
-    end
-
+  initial begin
+    env=new(ditf);
+    env.run_test();
+  end
+  
 endmodule
 
