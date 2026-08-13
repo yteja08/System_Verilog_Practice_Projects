@@ -1,7 +1,11 @@
 class transaction;
   rand bit a;
   rand bit b;
-  rand bit cin;
+  rand bit c;
+  
   bit sum;
-  bit cout;
+  bit carry;
+
 endclass
+    
+  
