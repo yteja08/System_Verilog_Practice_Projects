@@ -1,9 +1,10 @@
 module full_adder(
-  input logic a,b,cin,
-  output logic sum,cout);
+  input logic a,b,c,
+  output logic sum, carry);
   
   always_comb begin
-    sum = a^b^cin;
-    cout = (a&b)|(b&cin)|(cin&a);
+    sum=(a^b^c);
+    carry=((a&b)|(b&c)|(a&c));
   end
+  
 endmodule
