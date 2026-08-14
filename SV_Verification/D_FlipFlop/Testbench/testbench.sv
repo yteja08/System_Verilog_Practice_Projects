@@ -1,29 +1,27 @@
-`include "transaction.sv"
-`include "generator.sv"
 `include "interface.sv"
-`include "driver.sv"
-`include "monitor.sv"
-`include "scoreboard.sv"
 `include "environment.sv"
 
-module testbench;
-  
-    environment env;
+module testbench();
+  itf ditf();
+  environment env;  
 
-    full_adder_itf vitf();
-
-    full_adder dut (
-      .a    (vitf.a),
-      .b    (vitf.b),
-      .cin  (vitf.cin),
-      .sum  (vitf.sum),
-      .cout (vitf.cout)
+    dff dut(
+  .reset(ditf.reset),
+  .d(ditf.d),
+  .q(ditf.q),
+  .clk(ditf.clk)
     );
-
-    initial begin
-      env = new(vitf);
-      env.run();
-    end
-
+  
+  initial begin
+    ditf.clk = 0;
+    forever #5
+    ditf.clk = ~ditf.clk;
+  end
+  
+  initial begin
+    env=new(ditf);
+    env.run_test();
+    $finish;
+  end
+  
 endmodule
-
