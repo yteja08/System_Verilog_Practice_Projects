@@ -1,50 +1,30 @@
 class driver;
-
-    transaction tr;
-
-    mailbox #(transaction) gen2drv;
-    mailbox #(transaction) drv2mon;
-    mailbox #(bit) mon2drv_ack;
-
-    virtual full_adder_itf vitf;
-
-
-    function new(mailbox #(transaction) gen2drv,
-                 mailbox #(transaction) drv2mon,
-                 mailbox #(bit) mon2drv_ack,
-                 virtual full_adder_itf vitf);
-
-        this.gen2drv = gen2drv;
-        this.drv2mon = drv2mon;
-        this.mon2drv_ack = mon2drv_ack;
-        this.vitf = vitf;
-
-    endfunction
-
-
-    task run();
+  virtual itf vitf;
+  mailbox gen2drv;
+  transaction tr1;
+  event drive_done;
+  
+  function new(virtual itf vitf, mailbox gen2drv,event drive_done);
+    this.vitf=vitf;
+    this.gen2drv=gen2drv;
+    this.drive_done=drive_done;
+  endfunction
+  
+  task main();
+    repeat(15) begin
       
-      bit ack;
-
-      repeat(40) begin
-
-            gen2drv.get(tr);
-
-            vitf.a   = tr.a;
-            vitf.b   = tr.b;
-            vitf.cin = tr.cin;
-
-            $display("Driver: a=%0d b=%0d cin=%0d",
-                     vitf.a, vitf.b, vitf.cin);
-
-            // Tell monitor that inputs are driven
-            drv2mon.put(tr);
-
-            // Wait until monitor captures this transaction
-          mon2drv_ack.get(ack);
-
-        end
-
-    endtask
-
+      gen2drv.get(tr1);
+      
+      @(negedge vitf.clk);
+      
+      vitf.reset=tr1.reset;
+      vitf.d=tr1.d;
+      vitf.q=tr1.q;
+      
+      ->drive_done;
+      #1;
+      $display("DRIVER:, reset=%0b ,d=%0b, q=%0b", vitf.reset,vitf.d,vitf.q);
+      #1;
+    end
+  endtask
 endclass
