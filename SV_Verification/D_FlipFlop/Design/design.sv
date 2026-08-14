@@ -2,7 +2,7 @@ module dff(
   input logic d, clk, reset,
   output logic q);
   
-  always_ff begin
+  always@(posedge clk) begin
     if(reset) begin
       q<=1'b0;
     end
