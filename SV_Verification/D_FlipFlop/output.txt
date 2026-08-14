@@ -1,0 +1,108 @@
+[2026-08-14 08:39:24 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-access' '+rw' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 14, 2026 at 04:39:24 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		testbench
+Loading snapshot worklib.testbench:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+Generator: reset=0 ,d=1, q=0
+Generator: reset=1 ,d=1, q=0
+Generator: reset=1 ,d=0, q=0
+Generator: reset=0 ,d=1, q=0
+Generator: reset=0 ,d=0, q=0
+Generator: reset=1 ,d=0, q=0
+Generator: reset=0 ,d=1, q=0
+Generator: reset=1 ,d=1, q=0
+Generator: reset=1 ,d=1, q=0
+Generator: reset=0 ,d=1, q=0
+Generator: reset=0 ,d=0, q=0
+Generator: reset=0 ,d=0, q=0
+Generator: reset=1 ,d=1, q=0
+Generator: reset=0 ,d=1, q=0
+Generator: reset=1 ,d=1, q=0
+------------------------------------------------------------
+>>> Displaying The Samples Happened In The Posedge Of CLK<<<
+------------------------------------------------------------
+DRIVER:, reset=0 ,d=1, q=0
+MONITOR: reset=0, d=1, q=1
+SCOREBOARD:, reset=0 ,d=1, q=1 
+PASS
+------------------------------------------------------------
+DRIVER:, reset=1 ,d=1, q=0
+MONITOR: reset=1, d=1, q=0
+SCOREBOARD:, reset=1 ,d=1, q=0 
+PASS
+------------------------------------------------------------
+DRIVER:, reset=1 ,d=0, q=0
+MONITOR: reset=1, d=0, q=0
+SCOREBOARD:, reset=1 ,d=0, q=0 
+PASS
+------------------------------------------------------------
+DRIVER:, reset=0 ,d=1, q=0
+MONITOR: reset=0, d=1, q=1
+SCOREBOARD:, reset=0 ,d=1, q=1 
+PASS
+------------------------------------------------------------
+DRIVER:, reset=0 ,d=0, q=0
+MONITOR: reset=0, d=0, q=0
+SCOREBOARD:, reset=0 ,d=0, q=0 
+PASS
+------------------------------------------------------------
+DRIVER:, reset=1 ,d=0, q=0
+MONITOR: reset=1, d=0, q=0
+SCOREBOARD:, reset=1 ,d=0, q=0 
+PASS
+------------------------------------------------------------
+DRIVER:, reset=0 ,d=1, q=0
+MONITOR: reset=0, d=1, q=1
+SCOREBOARD:, reset=0 ,d=1, q=1 
+PASS
+------------------------------------------------------------
+DRIVER:, reset=1 ,d=1, q=0
+MONITOR: reset=1, d=1, q=0
+SCOREBOARD:, reset=1 ,d=1, q=0 
+PASS
+------------------------------------------------------------
+DRIVER:, reset=1 ,d=1, q=0
+MONITOR: reset=1, d=1, q=0
+SCOREBOARD:, reset=1 ,d=1, q=0 
+PASS
+------------------------------------------------------------
+DRIVER:, reset=0 ,d=1, q=0
+MONITOR: reset=0, d=1, q=1
+SCOREBOARD:, reset=0 ,d=1, q=1 
+PASS
+------------------------------------------------------------
+DRIVER:, reset=0 ,d=0, q=0
+MONITOR: reset=0, d=0, q=0
+SCOREBOARD:, reset=0 ,d=0, q=0 
+PASS
+------------------------------------------------------------
+DRIVER:, reset=0 ,d=0, q=0
+MONITOR: reset=0, d=0, q=0
+SCOREBOARD:, reset=0 ,d=0, q=0 
+PASS
+------------------------------------------------------------
+DRIVER:, reset=1 ,d=1, q=0
+MONITOR: reset=1, d=1, q=0
+SCOREBOARD:, reset=1 ,d=1, q=0 
+PASS
+------------------------------------------------------------
+DRIVER:, reset=0 ,d=1, q=0
+MONITOR: reset=0, d=1, q=1
+SCOREBOARD:, reset=0 ,d=1, q=1 
+PASS
+------------------------------------------------------------
+DRIVER:, reset=1 ,d=1, q=0
+MONITOR: reset=1, d=1, q=0
+SCOREBOARD:, reset=1 ,d=1, q=0 
+PASS
+------------------------------------------------------------
+Simulation complete via $finish(1) at time 156 NS + 0
+./testbench.sv:24     $finish;
+xcelium> exit
+TOOL:	xrun	25.03-s001: Exiting on Aug 14, 2026 at 04:39:25 EDT  (total: 00:00:01)
+Done
