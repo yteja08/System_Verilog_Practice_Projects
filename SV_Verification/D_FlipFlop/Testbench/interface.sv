@@ -1,9 +1,8 @@
-interface dff_itf;
+interface itf();
 
     logic d;
-    logic clk;
     logic reset;
-
     logic q;
+    logic clk;
 
 endinterface
