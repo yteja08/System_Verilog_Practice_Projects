@@ -1,42 +1,30 @@
 class scoreboard;
-
-    transaction tr;
-    mailbox #(transaction) mon2scb;
-
-    function new(mailbox #(transaction) mon2scb);
-        this.mon2scb = mon2scb;
-    endfunction
-
-    task run();
-
-        bit expected_sum;
-        bit expected_cout;
-
-      repeat(40) begin
-
-            mon2scb.get(tr);
-
-            expected_sum  = tr.a ^ tr.b ^ tr.cin;
-          expected_cout = ((tr.a & tr.b) |
-                           (tr.b & tr.cin) |
-                           (tr.cin & tr.a));
-
-            if ((tr.sum == expected_sum) &&
-                (tr.cout == expected_cout)) begin
-              $display("+----+");
-              $display("|PASS|");
-              $display("+----+");
-            end
-          
-            else begin
-
-              $display("+----+");
-              $display("|FAIL|");
-              $display("+----+");
-            end
-
-        end
-
-    endtask
-
+  mailbox mon2scb;
+  transaction tr2;
+  
+  bit expected_q;
+  
+  function new(mailbox mon2scb);
+    this.mon2scb=mon2scb;
+  endfunction
+  
+  task main();
+    repeat(15) begin
+      mon2scb.get(tr2);
+      $display("SCOREBOARD:, reset=%0b ,d=%0b, q=%0b", tr2.reset,tr2.d,tr2.q,);
+      
+      expected_q=(tr2.d);
+      
+      if (((expected_q == tr2.q) && (tr2.reset == 1'b0)) || ((tr2.reset == 1'b1) && (tr2.q == 1'b0))) begin
+        $display("PASS");
+        $display("------------------------------------------------------------");
+      end
+      else begin
+        $display("FAIL");
+        $display("------------------------------------------------------------");
+      end
+      
+    end
+  endtask
 endclass
+    
