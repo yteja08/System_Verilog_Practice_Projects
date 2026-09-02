@@ -1,29 +1,10 @@
-`include "interface.sv"
-`include "environment.sv"
-
-module testbench();
-  itf ditf();
-  environment env;  
-
-    dff dut(
-  .rst(ditf.rst),
-  .d(ditf.d),
-  .en(ditf.en),
-  .q(ditf.q),
-  .qbar(ditf.qbar),
-  .clk(ditf.clk)
-    );
+class transaction;
   
-  initial begin
-    ditf.clk = 0;
-    forever #5
-    ditf.clk = ~ditf.clk;
-  end
+  rand bit d;
+  rand bit rst;
+  rand bit en;
+  bit q;
+  bit clk;
+  bit qbar;
   
-  initial begin
-    env=new(ditf);
-    env.run_test();
-    $finish;
-  end
-  
-endmodule
+endclass
