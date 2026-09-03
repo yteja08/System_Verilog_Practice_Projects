@@ -12,7 +12,3 @@ end
 assign qbar=~q;
 
 endmodule
-
-
-  
-
