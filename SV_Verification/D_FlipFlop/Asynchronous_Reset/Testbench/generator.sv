@@ -8,7 +8,7 @@ class generator;
     endfunction
   
   task run();
-    repeat(15) begin
+    repeat(30) begin
       
       tr=new();
       assert(tr.randomize());
