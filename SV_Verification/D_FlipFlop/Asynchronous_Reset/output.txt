@@ -1,0 +1,225 @@
+[2026-09-03 04:16:30 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-access' '+rw' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Sep 03, 2026 at 00:16:31 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		testbench
+Loading snapshot worklib.testbench:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+Generator: rst=1 ,d=1, en=0, q=0, qbar=0
+Generator: rst=1 ,d=0, en=0, q=0, qbar=0
+Generator: rst=0 ,d=0, en=0, q=0, qbar=0
+Generator: rst=1 ,d=0, en=1, q=0, qbar=0
+Generator: rst=0 ,d=1, en=0, q=0, qbar=0
+Generator: rst=0 ,d=0, en=1, q=0, qbar=0
+Generator: rst=1 ,d=1, en=1, q=0, qbar=0
+Generator: rst=1 ,d=1, en=0, q=0, qbar=0
+Generator: rst=1 ,d=0, en=0, q=0, qbar=0
+Generator: rst=1 ,d=0, en=0, q=0, qbar=0
+Generator: rst=0 ,d=0, en=0, q=0, qbar=0
+Generator: rst=0 ,d=0, en=1, q=0, qbar=0
+Generator: rst=1 ,d=0, en=0, q=0, qbar=0
+Generator: rst=1 ,d=0, en=0, q=0, qbar=0
+Generator: rst=1 ,d=0, en=1, q=0, qbar=0
+Generator: rst=1 ,d=1, en=1, q=0, qbar=0
+Generator: rst=1 ,d=0, en=1, q=0, qbar=0
+Generator: rst=0 ,d=1, en=0, q=0, qbar=0
+Generator: rst=0 ,d=0, en=0, q=0, qbar=0
+Generator: rst=0 ,d=0, en=0, q=0, qbar=0
+Generator: rst=0 ,d=0, en=0, q=0, qbar=0
+Generator: rst=1 ,d=0, en=0, q=0, qbar=0
+Generator: rst=0 ,d=1, en=0, q=0, qbar=0
+Generator: rst=0 ,d=0, en=0, q=0, qbar=0
+Generator: rst=0 ,d=0, en=0, q=0, qbar=0
+Generator: rst=1 ,d=0, en=0, q=0, qbar=0
+Generator: rst=0 ,d=1, en=0, q=0, qbar=0
+Generator: rst=1 ,d=1, en=1, q=0, qbar=0
+Generator: rst=0 ,d=0, en=0, q=0, qbar=0
+Generator: rst=1 ,d=1, en=0, q=0, qbar=0
+DRIVER:, rst=1 ,d=1, en=0
+MONITOR: rst=1, d=1, en=0, q=0, qbar=0
+SCOREBOARD:, rst=1 ,d=1, en=0, q=0, qbar=0
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=0, en=0
+MONITOR: rst=1, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=0 ,d=0, en=0
+MONITOR: rst=0, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=0 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=0, en=1
+MONITOR: rst=1, d=0, en=1, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=0, en=1, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=0 ,d=1, en=0
+MONITOR: rst=0, d=1, en=0, q=0, qbar=1
+SCOREBOARD:, rst=0 ,d=1, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=0 ,d=0, en=1
+MONITOR: rst=0, d=0, en=1, q=0, qbar=1
+SCOREBOARD:, rst=0 ,d=0, en=1, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=1, en=1
+MONITOR: rst=1, d=1, en=1, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=1, en=1, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=1, en=0
+MONITOR: rst=1, d=1, en=0, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=1, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=0, en=0
+MONITOR: rst=1, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=0, en=0
+MONITOR: rst=1, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=0 ,d=0, en=0
+MONITOR: rst=0, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=0 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=0 ,d=0, en=1
+MONITOR: rst=0, d=0, en=1, q=0, qbar=1
+SCOREBOARD:, rst=0 ,d=0, en=1, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=0, en=0
+MONITOR: rst=1, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=0, en=0
+MONITOR: rst=1, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=0, en=1
+MONITOR: rst=1, d=0, en=1, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=0, en=1, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=1, en=1
+MONITOR: rst=1, d=1, en=1, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=1, en=1, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=0, en=1
+MONITOR: rst=1, d=0, en=1, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=0, en=1, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=0 ,d=1, en=0
+MONITOR: rst=0, d=1, en=0, q=0, qbar=1
+SCOREBOARD:, rst=0 ,d=1, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=0 ,d=0, en=0
+MONITOR: rst=0, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=0 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=0 ,d=0, en=0
+MONITOR: rst=0, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=0 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=0 ,d=0, en=0
+MONITOR: rst=0, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=0 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=0, en=0
+MONITOR: rst=1, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=0 ,d=1, en=0
+MONITOR: rst=0, d=1, en=0, q=0, qbar=1
+SCOREBOARD:, rst=0 ,d=1, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=0 ,d=0, en=0
+MONITOR: rst=0, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=0 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=0 ,d=0, en=0
+MONITOR: rst=0, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=0 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=0, en=0
+MONITOR: rst=1, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=0 ,d=1, en=0
+MONITOR: rst=0, d=1, en=0, q=0, qbar=1
+SCOREBOARD:, rst=0 ,d=1, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=1, en=1
+MONITOR: rst=1, d=1, en=1, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=1, en=1, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=0 ,d=0, en=0
+MONITOR: rst=0, d=0, en=0, q=0, qbar=1
+SCOREBOARD:, rst=0 ,d=0, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+DRIVER:, rst=1 ,d=1, en=0
+MONITOR: rst=1, d=1, en=0, q=0, qbar=1
+SCOREBOARD:, rst=1 ,d=1, en=0, q=0, qbar=1
+------------------------------------------------------------
+PASS
+------------------------------------------------------------
+Simulation complete via $finish(1) at time 295 NS + 2
+./testbench.sv:26     $finish;
+xcelium> exit
+TOOL:	xrun	25.03-s001: Exiting on Sep 03, 2026 at 00:16:32 EDT  (total: 00:00:01)
+Done
