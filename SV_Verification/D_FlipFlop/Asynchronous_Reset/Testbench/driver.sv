@@ -9,11 +9,11 @@ class driver;
   endfunction
   
   task run();
-    repeat(15) begin
+    repeat(30) begin
       
       gen2drv.get(tr);
       
-      @(drv_clk);
+      @(vitf.drv_clk);
       
       vitf.rst=tr.rst;
       vitf.d=tr.d;
