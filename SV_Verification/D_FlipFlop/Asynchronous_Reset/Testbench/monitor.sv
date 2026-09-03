@@ -9,9 +9,9 @@ class monitor;
   endfunction
   
   task run();
-    repeat(15) begin
+    repeat(30) begin
       
-      @(mon_clk);
+      @(vitf.mon_clk);
       
       tr=new();
       tr.rst=vitf.rst;
@@ -20,7 +20,7 @@ class monitor;
       tr.q=vitf.q;
       tr.qbar=vitf.qbar;
       
-      $display("MONITOR: rst=%0b, d=%0b, en=%0b, q=%0b, qbar=%0b",tr.reset,tr.d,tr.en, tr.q,tr.qbar);
+      $display("MONITOR: rst=%0b, d=%0b, en=%0b, q=%0b, qbar=%0b",tr.rst,tr.d,tr.en, tr.q,tr.qbar);
      
       mon2scb.put(tr);
       
