@@ -10,7 +10,7 @@ class scoreboard;
   endfunction
   
   task run();
-    repeat(15) begin
+    repeat(30) begin
       mon2scb.get(tr);
       
       $display("SCOREBOARD:, rst=%0b ,d=%0b, en=%0b, q=%0b, qbar=%0b", tr.rst, tr.d, tr.en, tr.q, tr.qbar);
@@ -18,7 +18,7 @@ class scoreboard;
       expected_q=(tr.rst?1'b0:(tr.en?tr.d:tr.q));
       expected_qbar=(~expected_q);
       
-      if (((expected_q == tr.q) && (tr.reset == 1'b0)) || ((tr.reset == 1'b1) && (expected_q == 1'b0))) begin
+      if (((expected_q == tr.q) && (tr.rst == 1'b0)) || ((tr.rst == 1'b1) && (expected_q == 1'b0))) begin
         
         $display("------------------------------------------------------------");
         $display("PASS");
